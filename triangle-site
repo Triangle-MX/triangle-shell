@@ -1,0 +1,50 @@
+#!/bin/sh
+
+cd
+cd Desktop/Triangle/A-Site-4.0/
+
+if [ "$1" = "" ]
+then
+    echo Triangle Site 4.0: Error... You have to specify a routine like sass or browser-sync
+    say Triangle Site 4.0: Error... You have to specify a routine like sass or browser-sync
+fi
+
+if [ "$1" = "dev" ]
+then
+    cd
+    cd Desktop/Triangle/A-Site-4.0/
+    open A-Site-4.0 -a Atom
+fi
+
+if [ "$1" = "sass" ]
+then
+    cd
+    cd Desktop/Triangle/A-Site-4.0/css
+    echo Triangle Site 4.0: Watching main.sass
+    say Triangle Site 4.0: Watching main.sass
+    sass --watch main.sass:main.css
+fi
+
+if [ "$1" = "browser-sync" ]
+then
+    cd
+    cd Desktop/Triangle/A-Site-4.0/
+    echo Triangle Site 4.0: Running with Browser-Sync
+    say Triangle Site 4.0: Running with Browser-Sync
+    browser-sync start --server --files "css/*.css, *.html, */*.html js/*.js js/vendor/*.js"
+fi
+
+if [ "$1" = "view-site" ]
+then
+    cd
+    echo Triangle Site 4.0: Viewing Site on Chrome
+    say Triangle Site 4.0: Viewing Site on Chrome
+    open https://triangle.mx
+fi
+
+if [ "$1" = "docs" ]
+then
+    echo Triangle-Site 4.0: Showing Docs
+    say Triangle-Site 4.0: Showing Docs
+    open https://github.com/Triangle-MX/Triangle-Shell/
+fi
