@@ -3,10 +3,16 @@
 cd
 cd Desktop/Triangle/A-Site-4.0/
 
-if [ "$1" = "" ]
+if [ "$1" = ""]
 then
-    echo Triangle Site 4.0: Error... You have to specify a routine like sass or browser-sync
-    say Triangle Site 4.0: Error... You have to specify a routine like sass or browser-sync
+    echo Triangle Shell v3
+    say Triangle Shell v3
+fi
+
+if [ "$1" = "man" ]
+then
+    echo Triangle Site 4.0: You must specify a routine like sass or browser-sync
+    say Triangle Site 4.0: You must specify a routine like sass or browser-sync
 fi
 
 if [ "$1" = "dev" ]
