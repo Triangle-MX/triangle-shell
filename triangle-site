@@ -3,10 +3,10 @@
 cd
 cd Desktop/Triangle/A-Site-4.0/
 
-if [ "$1" = ""]
+if [ "$1" = "" ]
 then
-    echo Triangle Shell v3
-    say Triangle Shell v3
+    echo Triangle Shell v4
+    say Triangle Shell v4
 fi
 
 if [ "$1" = "man" ]
@@ -46,6 +46,14 @@ then
     echo Triangle Site 4.0: Viewing Site on Chrome
     say Triangle Site 4.0: Viewing Site on Chrome
     open https://triangle.mx
+fi
+
+if [ "$1" = "analytics" ]
+then
+    cd
+    echo Triangle Site 4.0: Viewing Site Analytics
+    say Triangle Site 4.0: Viewing Site Analytics
+    open https://analytics.google.com/analytics/web/?hl=es&pli=1#embed/report-home/a74662952w149312632p154242907/
 fi
 
 if [ "$1" = "docs" ]
